@@ -1,4 +1,5 @@
-Flask==3.0.0
-gunicorn==21.2.0
-google-generativeai==0.7.2
-markdown==3.5.2
+Flask
+gunicorn
+google-generativeai
+markdown
+python-dotenv
