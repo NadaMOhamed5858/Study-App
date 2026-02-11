@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 text-end fade-in border-0 shadow-lg">
+    <h2 class="text-center text-primary mb-4">🗓️ مواعيدك الأسبوعية</h2>
+    <form method="POST">
+        <div class="row g-3">
+            {% for day in ['السبت', 'الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة'] %}
+            <div class="col-md-6"><div class="p-3 border rounded-3 bg-light"><label class="form-label fw-bold">يوم {{ day }}</label><input type="text" name="{{ day }}" class="form-control" placeholder="مواعيد المدرسة والدروس" required></div></div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary w-100 mt-4 py-3">حفظ وانتقال للاختبار</button>
+    </form>
+</div>
+{% endblock %}

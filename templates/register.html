@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center text-end fade-in">
+    <div class="col-md-6 card p-5 shadow-lg border-0 rounded-4">
+        <h2 class="text-center text-primary fw-bold mb-4">بيانات الطالب ✍️</h2>
+        <form method="POST">
+            <div class="mb-3"><label class="form-label">الاسم الكامل</label><input type="text" name="name" class="form-control" required></div>
+            <div class="row"><div class="col-md-6 mb-3"><label class="form-label">السن</label><input type="number" name="age" class="form-control" required></div><div class="col-md-6 mb-3"><label class="form-label">السنة الدراسية</label><input type="text" name="year" class="form-control" required></div></div>
+            <div class="mb-3"><label class="form-label">المرحلة الدراسية</label><select name="stage" class="form-select"><option>ابتدائي</option><option>إعدادي</option><option>ثانوية عامة</option></select></div>
+            <div class="mb-3"><label class="form-label">نفسك تطلعي إيه؟</label><input type="text" name="dream" class="form-control" required></div>
+            <div class="mb-3"><label class="form-label">إيه أكبر مشكلة بتواجهك؟</label><textarea name="problem" class="form-control"></textarea></div>
+            <button type="submit" class="btn btn-primary w-100 py-3 mt-3">التالي: تنظيم الوقت <i class="fas fa-arrow-left ms-2"></i></button>
+        </form>
+    </div>
+</div>
+{% endblock %}

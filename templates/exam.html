@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-4 text-end" dir="rtl">
+    <div class="card shadow-lg border-0 rounded-4 p-4 shadow">
+        <h2 class="text-primary mb-4 border-bottom pb-2">🧠 اختبار تحديد المستوى الذكي - {{ stage }}</h2>
+        <p class="text-muted">هذا الاختبار مخصص لسنك ومرحلتك الدراسية ليتمكن الـ AI من تنظيم جدولك.</p>
+
+        <form action="/exam" method="POST">
+            {% for q in questions %}
+            <div class="mb-4 p-3 bg-light rounded-4">
+                <label class="form-label fw-bold">{{ loop.index }}. {{ q }}</label>
+                <input type="text" class="form-control border-0 shadow-sm" placeholder="اكتبي إجابتك هنا..." required>
+            </div>
+            {% endfor %}
+
+            <hr>
+            <h4 class="text-danger mb-3">⚠️ آخر خطوة قبل الجدول:</h4>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>أكثر مادة بتواجهي فيها صعوبة؟</label>
+                    <input type="text" name="bad_grade_subject" class="form-control" placeholder="مثلاً: الفيزياء" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>مادة مش بتحبي تذاكريها؟</label>
+                    <input type="text" name="hated_subject" class="form-control" placeholder="مثلاً: الإنجليزي" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill shadow">إنهاء الاختبار وعرض جـدولي الذكي ✨</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

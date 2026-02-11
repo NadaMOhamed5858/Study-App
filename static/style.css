@@ -1,0 +1,7 @@
+body { background-color: #f0f2f5; font-family: 'Cairo', sans-serif; }
+.card { border-radius: 15px; }
+.btn-primary { background: linear-gradient(45deg, #0d6efd, #0dcaf0); border: none; }
+.fade-in { animation: fadeIn 0.8s ease-in; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.list-group-item { border: none; padding-right: 0; }
+#chat-box { font-size: 0.9rem; }
